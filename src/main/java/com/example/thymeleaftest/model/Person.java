@@ -1,4 +1,4 @@
-package com.example.thymeleaftest;
+package com.example.thymeleaftest.model;
 
 public class Person {
 

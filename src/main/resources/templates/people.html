@@ -15,12 +15,18 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="person: ${people}">
-        <td th:text="${person.getName()}"/>
-        <td th:text="${person.getAge()}"/>
+    <tr th:each="personob: ${people}">
+        <td th:text="${personob.getName()}"/>
+        <td th:text="${personob.getAge()}"/>
     </tr>
     </tbody>
 </table>
+
+<div th:each="person: ${persons}">
+    <span th:text="${person.name} + ' ' + ${person.age}"></span>
+    <span  th:if="${person.age >= 18}"> Du må gerne købe alkohol</span>
+    <span  th:unless="${person.age > 18}"> Du må ikke købe alkohol</span>
+</div>
 
 </body>
 </html>
